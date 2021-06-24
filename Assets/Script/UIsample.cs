@@ -9,10 +9,18 @@ public class UIsample : MonoBehaviour
     private Image _image;
     [SerializeField]
     private Text _text;
+    [SerializeField]
+    private Button _button;
     
     void Start()
     {
-        _image.rectTransform.anchoredPosition = Vector2.zero;
+        //Use this for intialization
+        _button.onClick.AddListener(() => { Debug.Log("Click"); });
+
+
+        //アンカーポジションにimageを移動させる
+        //_image.rectTransform.anchoredPosition = Vector2.zero;
+
 
         ////imageを300×300に変更する
         //_image.rectTransform.sizeDelta = new Vector2(300f, 300f);
