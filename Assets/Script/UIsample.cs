@@ -12,7 +12,7 @@ public class UIsample : MonoBehaviour
     
     void Start()
     {
-        _image.transform.localPosition = Vector2.zero;
+        _image.rectTransform.anchoredPosition = Vector2.zero;
 
         ////imageを300×300に変更する
         //_image.rectTransform.sizeDelta = new Vector2(300f, 300f);
