@@ -6,16 +6,30 @@ using UnityEngine.UI;
 public class UIsample : MonoBehaviour
 {
     [SerializeField]
-    private Image _image;
-    [SerializeField]
-    private Text _text;
-    [SerializeField]
-    private Button _button;
-    
+    private CustomButton _button;
+
+    //[SerializeField]
+    //private Image _image;
+    //[SerializeField]
+    //private Text _text;
+    //[SerializeField]
+    //private Button _button;
+
+    //Use this for intialization
     void Start()
     {
-        //Use this for intialization
-        _button.onClick.AddListener(() => { Debug.Log("Click"); });
+        _button.OnClickAction = () =>
+        {
+            Debug.Log("Click");
+        };
+        _button.OnLongPressAction = () =>
+        {
+            Debug.Log("LongPress");
+        };
+
+
+        //imageをクリックするとコンソールにClickが出力される
+        //_button.onClick.AddListener(() => { Debug.Log("Click"); });
 
 
         //アンカーポジションにimageを移動させる
