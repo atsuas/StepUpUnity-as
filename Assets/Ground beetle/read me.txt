@@ -1,0 +1,53 @@
+Read me
+
+I show my 3D model data in order to get to know the fascination of the form of insects to everyone. 
+Use to commercial also is free. There is no need to specify the reference source. 
+Please observe this much. 
+Do not use in any way in the expression of harming the human mind or violence.
+
+You can correct it by the Retopo.
+You can remodel to your original insect model.
+
+Please check the accuracy of the shape by observing the specimen.
+You have to observe insects more carefully to create your model.
+
+Rachel Carson _ "The sence of wonder" 
+
+
+It is one way to get to know more deeply the complexity and beauty of nature .
+I hope that it can become an opportunity for young people to think about nature.
+
+Attention ! I do not take responsibility of all about the downloading of data and the uptake of data to 3D application.
+
+ZEROKOBO
+
+http://zerokobo.web.fc2.com/
+
+-------------------------------------------------------
+
+
+データ使用についてのお願い 
+
+昆虫に限らず自然が生み出した造形は尽きることのない魅力を放っています。
+多くの人に昆虫のかたちの美しさを知ってほしいと3Dモデルデータの公開をします。
+商用を問わず自由に利用、改変OKです。引用の明記等必要ありません。
+ただし、人の心をおとしめたり傷つけるような表現、暴力を助長するような表現への利用には絶対に使わないでくださいね。
+
+メッシュの流れが偏っているものもあり、リトポをして修正してください。
+細部を造りこんだり、オリジナルのキャラクターに改造したりして楽しんでください。
+特に若い人が自然のかたちに興味を持つことから始めて、造形を通じて自然の複雑さ素晴らしさを感じ、身のまわりの自然環境のことについて考えるきっかけになれば嬉しいです。
+
+昆虫の形態の正確さはあくまで素人の個人の観察範囲の造形ですので、間違いが多々あると思います。ご自身の目で観察して確認してください。虫眼鏡で見ると新たな発見がありますよ。翅などは片面データですのでビューアーで見られる場合、表示設定を両面表示にする必要があります。3Dプリンターなどで出力するにはポリゴンの穴埋め・翅の厚み付け他データの修正が必要です。
+
+
+
+「沈黙の春」の著者レイチェル・カーソンの死後彼女が残したエッセイを中心に友人達が出版した本「The sence of wonder」より　―　「驚異に満ち満ちた自然に接して目を輝かせていた子供の頃の感性を持ち続けることの大切さ・・・」　
+
+自然を観てものを作ることは自然をより深く知っていくことの一つの方法です。
+
+
+（注）データのダウンロードおよび、3Dアプリケーションへのデータの取り込み等に関しての一切の責任をもちません。自己責任において行ってください。
+
+ゼロ工房
+https://zerokojp.web.fc2.com/
+
