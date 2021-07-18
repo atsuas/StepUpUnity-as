@@ -6,30 +6,41 @@ using UnityEngine.UI;
 public class InfiniteScroll : MonoBehaviour
 {
     [SerializeField]
-    private RectTransform _cellPrefab;
+    private Cell _cellPrefab;
     [SerializeField]
     private int _instantateCellCount;
     [SerializeField]
     private ScrollRect _scrollRect;
     [SerializeField]
-    private float _cellHeight;
+    private float _cellHeight = -1f;
 
-    private LinkedList<RectTransform> _cellList = new LinkedList<RectTransform>();
+    private LinkedList<Cell> _cellList = new LinkedList<Cell>();
+
+    private List<int> _dataList = new List<int>();
 
     private float _lastContentPositionY = 0f;
+    private int _index;
     
     void Start()
     {
+        for (int i = 0; i < 20; i++)
+        {
+            _dataList.Add(i);
+        }
+
         for (int i = 0; i < _instantateCellCount; i++)
         {
             var item = Instantiate(_cellPrefab, _scrollRect.content);
 
             //上詰めするためにAnchorを設定
-            item.anchorMin = new Vector2(0.5f, 1f);
-            item.anchorMax = new Vector2(0.5f, 1f);
+            item.rectTransform.anchorMin = new Vector2(0.5f, 1f);
+            item.rectTransform.anchorMax = new Vector2(0.5f, 1f);
 
             //_cellHeight / 2fはPivotの差分
-            item.anchoredPosition = new Vector2(0f, -_cellHeight * i + _cellHeight / 2f);
+            item.rectTransform.anchoredPosition = new Vector2(0f, -_cellHeight * i + _cellHeight / 2f);
+
+            item.Updatedata(GetDataIndex(i));
+
             _cellList.AddLast(item);
         }
 
@@ -63,7 +74,10 @@ public class InfiniteScroll : MonoBehaviour
                 _cellList.RemoveFirst();
                 _cellList.AddLast(first);
 
-                first.anchoredPosition = new Vector2(0f, last.anchoredPosition.y - _cellHeight);
+                first.rectTransform.anchoredPosition = new Vector2(0f, last.rectTransform.anchoredPosition.y - _cellHeight);
+
+                first.Updatedata(GetDataIndex(_index + _instantateCellCount));
+                _index++;
             }
             else
             {
@@ -72,8 +86,28 @@ public class InfiniteScroll : MonoBehaviour
                 _cellList.RemoveLast();
                 _cellList.AddFirst(last);
 
-                last.anchoredPosition = new Vector2(0f, first.anchoredPosition.y + _cellHeight);
+                last.rectTransform.anchoredPosition = new Vector2(0f, first.rectTransform.anchoredPosition.y + _cellHeight);
+
+                _index--;
+                last.Updatedata(GetDataIndex(_index));
             }
         }
+    }
+
+    private int GetDataIndex(int index)
+    {
+        if (index >= 0 && _dataList.Count > index)
+        {
+            return _dataList[index];
+        }
+
+        //下に追加した要素のデータ
+        //前のデータを取得
+        if (index < 0)
+        {
+            return _dataList[_dataList.Count + (index + 1) % _dataList.Count - 1];
+        }
+
+        return index;
     }
 }
