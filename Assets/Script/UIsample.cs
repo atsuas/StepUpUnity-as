@@ -6,24 +6,19 @@ using UnityEngine.UI;
 public class UIsample : MonoBehaviour
 {
     [SerializeField]
-    private CustomButton _button;
+    private Drag _drag;
+    [SerializeField]
+    private Drop _drop;
 
     //Use this for intialization
     void Start()
     {
-        _button.OnClickAction = () =>
+        _drop.OnDropAction = () =>
         {
-            Debug.Log("Click");
+            var dropImage = _drop.GetComponent<Image>();
+            var dragImage = _drag.GetComponent<Image>();
+            dropImage.color = dragImage.color;
         };
-        _button.OnLongPressAction = () =>
-        {
-            Debug.Log("LongPress");
-        };
-
     }
 
-    void Update()
-    {
-        
-    }
 }
